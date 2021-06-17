@@ -1,3 +1,3 @@
 export default function x() {
-  return <div>Home</div>
+  return <div>Messages</div>
 }
