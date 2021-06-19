@@ -9,10 +9,7 @@ export default function Layout(props) {
       <CssBaseline />
       <Navigation />
       <Container maxWidth="md" 
-        style={{ 
-          marginTop: '3em',
-          // backgroundColor: '#cfe8fc', height: '100vh', 
-        }}
+        style={{ marginTop: '3em' }}
       >
         {props.children}
       </Container>

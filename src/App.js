@@ -1,6 +1,5 @@
 import './App.css';
-import Navigation from './layout/navigation'
-import { Router } from '@reach/router'
+import { Router, Redirect } from '@reach/router'
 import Home from './screens/home'
 import Notifications from './screens/notifications'
 import Messages from './screens/messages'
@@ -15,6 +14,8 @@ function App() {
     <Layout >
       <div className="App">
         <Router style={{width: '100%'}}>
+          <Redirect from="/" to="/dashboard" noThrow />
+
           <Home            path="/" />
           <Notifications   path="/notifications" />
           <Messages        path="/messages" />

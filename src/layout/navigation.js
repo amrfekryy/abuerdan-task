@@ -36,6 +36,8 @@ const useStyles = makeStyles((theme) => ({
 
 export default function Navigation() {
 
+  const [ title, setTitle ] = React.useState('Dashboard')
+
   const classes = useStyles();
   const [mobileMoreAnchorEl, setMobileMoreAnchorEl] = React.useState(null);
 
@@ -62,32 +64,32 @@ export default function Navigation() {
       open={isMobileMenuOpen}
       onClose={handleMobileMenuClose}
     >
-      <MenuItem onClick={()=> navigate('/notifications')}>
+      <MenuItem onClick={()=> {navigate('/notifications'); setTitle('Notifications')}}>
         <IconButton color="inherit">
-          <Badge badgeContent={11} color="secondary">
+          <Badge badgeContent={7} color="secondary">
             <NotificationsIcon />
           </Badge>
         </IconButton>
         <p>Notifications</p>
       </MenuItem>
 
-      <MenuItem onClick={()=> navigate('/messages')}>
+      <MenuItem onClick={()=> {navigate('/messages'); setTitle('Messages')}}>
         <IconButton color="inherit">
-          <Badge badgeContent={4} color="secondary">
+          <Badge badgeContent={5} color="secondary">
             <MailIcon />
           </Badge>
         </IconButton>
         <p>Messages</p>
       </MenuItem>
 
-      <MenuItem onClick={()=> navigate('/dashboard')}>
+      <MenuItem onClick={()=> {navigate('/dashboard'); setTitle('Dashboard')}}>
         <IconButton color="inherit">
           <DashboardIcon />
         </IconButton>
         <p>Dashboard</p>
       </MenuItem>
 
-      <MenuItem onClick={()=> navigate('/profile')}>
+      <MenuItem onClick={()=> {navigate('/profile'); setTitle('Profile')}}>
         <IconButton color="inherit">
           <AccountCircle />
         </IconButton>
@@ -104,29 +106,29 @@ export default function Navigation() {
           <img src={abuerdan} alt="logo" height="40" style={{marginRight: '1em'}}/>
           
           <Typography variant="h6" noWrap>
-            Home
+            {title}
           </Typography>
           
           <div className={classes.grow} />
           
           <div className={classes.sectionDesktop}>
-            <IconButton color="inherit" onClick={()=> navigate('/notifications')}>
+            <IconButton color="inherit" onClick={()=> {navigate('/notifications'); setTitle('Notifications');}}>
               <Badge badgeContent={7} color="secondary">
                 <NotificationsIcon />
               </Badge>
             </IconButton>
             
-            <IconButton color="inherit" onClick={()=> navigate('/messages')}>
+            <IconButton color="inherit" onClick={()=> {navigate('/messages'); setTitle('Messages')}}>
               <Badge badgeContent={5} color="secondary">
                 <MailIcon />
               </Badge>
             </IconButton>
             
-            <IconButton color="inherit" onClick={()=> navigate('/dashboard')}>
+            <IconButton color="inherit" onClick={()=> {navigate('/dashboard'); setTitle('Dashboard')}}>
               <DashboardIcon />
             </IconButton>
             
-            <IconButton color="inherit" onClick={()=> navigate('/profile')}>
+            <IconButton color="inherit" onClick={()=> {navigate('/profile'); setTitle('Profile')}}>
               <AccountCircle />
             </IconButton>
           </div>
