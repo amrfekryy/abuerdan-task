@@ -111,7 +111,7 @@ export default function Navigation() {
           
           <div className={classes.sectionDesktop}>
             <IconButton color="inherit" onClick={()=> navigate('/notifications')}>
-              <Badge badgeContent={17} color="secondary">
+              <Badge badgeContent={7} color="secondary">
                 <NotificationsIcon />
               </Badge>
             </IconButton>

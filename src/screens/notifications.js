@@ -17,7 +17,7 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 export default function Notifications() {
-  const count = 17
+  const count = 7
   const classes = useStyles();
 
   return (
