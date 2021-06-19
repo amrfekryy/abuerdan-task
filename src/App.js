@@ -13,18 +13,16 @@ const NotFound = () => <div>Not Found</div>
 function App() {
   return (
     <Layout >
-
-    <div className="App">
-      {/* <Navigation /> */}
-      <Router style={{width: '100%'}}>
-        <Home            path="/" />
-        <Notifications   path="/notifications" />
-        <Messages        path="/messages" />
-        <Dashboard       path="/dashboard" />
-        <Profile         path="/profile" />                 
-        <NotFound        default />
-      </Router>
-    </div>
+      <div className="App">
+        <Router style={{width: '100%'}}>
+          <Home            path="/" />
+          <Notifications   path="/notifications" />
+          <Messages        path="/messages" />
+          <Dashboard       path="/dashboard" />
+          <Profile         path="/profile" />                 
+          <NotFound        default />
+        </Router>
+      </div>
     </Layout>
   );
 }
