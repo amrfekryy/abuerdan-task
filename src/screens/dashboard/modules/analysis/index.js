@@ -60,11 +60,12 @@ export const Analysis = () => {
   
   if (!data.length) {    
     
-    // // sample data are for testing to save requests since they are limited to 50 per day
+    // Uncomment here to use sample data for testing
     // setData(sample)
     // console.log(sample)
     // setIsLoading(false) 
 
+    // Comment the following to use sample data for testing
     // fetch data
     fetch(accuweatherURL)
     .then(response => response.json())
