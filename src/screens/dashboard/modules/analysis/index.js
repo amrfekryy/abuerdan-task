@@ -60,24 +60,25 @@ export const Analysis = () => {
   
   if (!data.length) {    
     
-    // sample data are for testing to save requests since they are limited to 50 per day
-    setData(sample)
-    console.log(sample)
-    setIsLoading(false) 
+    // // sample data are for testing to save requests since they are limited to 50 per day
+    // setData(sample)
+    // console.log(sample)
+    // setIsLoading(false) 
 
-    // fetch(accuweatherURL)
-    // .then(response => response.json())
-    // .then((data=[]) => {
-    //   if ( data.length ) { 
-    //     console.log(data)
-    //     setData(data) 
-    //     setIsLoading(false)
-    //   }
-    // })
-    // .catch(() => {
-    //   alert('Error while fetching data!')
-    //   setIsLoading(false)
-    // })
+    // fetch data
+    fetch(accuweatherURL)
+    .then(response => response.json())
+    .then((data=[]) => {
+      if ( data.length ) { 
+        console.log(data)
+        setData(data) 
+        setIsLoading(false)
+      }
+    })
+    .catch(() => {
+      alert('Error while fetching data!')
+      setIsLoading(false)
+    })
   }  
 
   const processedData = processData(data)
