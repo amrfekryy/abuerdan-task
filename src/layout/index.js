@@ -9,7 +9,12 @@ export default function Layout(props) {
     <React.Fragment>
       <CssBaseline />
       <Navigation />
-      <Container maxWidth="md" style={{ backgroundColor: '#cfe8fc', height: '100vh', marginTop: '3em'}}>
+      <Container maxWidth="md" 
+        style={{ 
+          marginTop: '3em',
+          backgroundColor: '#cfe8fc', height: '100vh', 
+        }}
+      >
         {props.children}
       </Container>
     </React.Fragment>
